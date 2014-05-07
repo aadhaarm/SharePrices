@@ -10,7 +10,7 @@ List of companies
 Name: CompanyA
 Name: CompanyB
 Name: CompanyC
-
+-----------------------------------------------------------------------------------------------------
 Max share price company per year
 
 For Month/Year: Jan/1990 : Leading Company with maximum share prices: CompanyB
@@ -23,6 +23,7 @@ For Month/Year: Apr/1990 : Leading Company with maximum share prices: CompanyB
 
 etc
 
+------------------------------------------------------------------------------------------------------
 Each company best year/month and maximum share prices
 
 CompanyA has best share value so far 90 in Nov/1991
@@ -33,6 +34,7 @@ CompanyC has best share value so far 51 in Mar/1991
 
 Done
 
+------------------------------------------------------------------------------------------------------
 FOR A CSV FILE CONTAINING
 
 Year,Month,CompanyA,CompanyB,CompanyC
