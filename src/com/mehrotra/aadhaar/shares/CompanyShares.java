@@ -23,6 +23,11 @@ public class CompanyShares {
 	 */
 	public static void main(String[] args) {
 		String csvFile = "CompanyShares.csv";
+		
+		if(args != null && args.length > 0) {
+			csvFile = args[0];
+		}
+		
 		mapCompanies = new HashMap<>();
 		mapMonthYear = new HashMap<>();
 		mapMaxPriceCompany = new HashMap<>();
@@ -195,5 +200,21 @@ public class CompanyShares {
 	 */
 	private static void saveMonthYearInMap(int row, String[] companySharePriseList) {
 		mapMonthYear.put(row, companySharePriseList[1] + "/" + companySharePriseList[0]);
+	}
+
+	public static Map<Integer, String> getMapCompanies() {
+		return mapCompanies;
+	}
+
+	public static Map<Integer, String> getMapMonthYear() {
+		return mapMonthYear;
+	}
+
+	public static Map<Integer, Integer> getMapMaxPriceCompany() {
+		return mapMaxPriceCompany;
+	}
+
+	public static Map<Integer, SharePrice> getMapCompanyYearMonth() {
+		return mapCompanyYearMonth;
 	}
 }
