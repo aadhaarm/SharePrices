@@ -75,7 +75,7 @@ public class CompanyShares {
 			}
 			
 			// Print max share price company per year
-			System.out.println("Max share price company per year");
+			System.out.println("\nMax share price company per year");
 			row = 1;
 			for (Integer companyIndex : mapMaxPriceCompany.values()) {
 				System.out.println("For Month/Year: " + mapMonthYear.get(row) + " : Leading Company with maximum share prices: " + mapCompanies.get(companyIndex));
@@ -83,7 +83,7 @@ public class CompanyShares {
 			}
 			
 			// Print each company best year and maximum share prices
-			System.out.println("Each company best year/month and maximum share prices");
+			System.out.println("\nEach company best year/month and maximum share prices");
 			row = 0;
 			for (SharePrice sharePrice : mapCompanyYearMonth.values()) {
 				System.out.println(mapCompanies.get(row) + " has best share value so far " + sharePrice.getPrice() + " in " + sharePrice.getMonth() + "/" + sharePrice.getYear());
@@ -107,6 +107,13 @@ public class CompanyShares {
 		System.out.println("Done");
 	}
 
+	/**
+	 * Finds Leading company every Year/Month with maximum share prices between other companies
+	 * 
+	 * Populates mapCompanyYearMonth map object
+	 * 
+	 * @param companySharePriseList
+	 */
 	private static void findMaximumSharePriceForEachCompany(
 			String[] companySharePriseList) {
 		int column = 0;
@@ -134,6 +141,12 @@ public class CompanyShares {
 		}
 	}
 
+	/**
+	 * Finds Best share prices for a company so far in all the years/months
+	 * Populates mapMaxPriceCompany
+	 * @param row
+	 * @param companySharePriseList
+	 */
 	private static void findLeadCompanySharePrices(int row,
 			String[] companySharePriseList) {
 		int column = 0;
@@ -158,6 +171,11 @@ public class CompanyShares {
 		mapMaxPriceCompany.put(row, companyIndex_maxSharePrice - 2);
 	}
 
+	/**
+	 * Gathers companies names from first row
+	 * Populates mapCompanies map object
+	 * @param companySharePriseList
+	 */
 	private static void saveCompaniesNamesInMap(String[] companySharePriseList) {
 		int column = 0;
 		for (String csvItem : companySharePriseList) {
@@ -170,6 +188,11 @@ public class CompanyShares {
 		}
 	}
 
+	/**
+	 * Saves Year/Month entries in the CSV for later reference
+	 * @param row
+	 * @param companySharePriseList
+	 */
 	private static void saveMonthYearInMap(int row, String[] companySharePriseList) {
 		mapMonthYear.put(row, companySharePriseList[1] + "/" + companySharePriseList[0]);
 	}
