@@ -1,4 +1,4 @@
-package com.mehrotra.test;
+package test.shareprices;
 
 import static org.junit.Assert.assertTrue;
 
@@ -44,7 +44,10 @@ public class TestSharePriceAnalyzer {
 		/*
 		 * For CompanyB, maximum share prices reached in Nov/1990. Share price 53
 		 */
-		assertTrue(CompanyShares.getMapCompanyYearMonth().get(1) == new SharePrice("1990", "Nov", 53));
+		SharePrice sharePrice = CompanyShares.getMapCompanyYearMonth().get(1);
+		assertTrue(sharePrice.getPrice() == 53);
+		assertTrue(sharePrice.getYear().equals("1990"));
+		assertTrue(sharePrice.getMonth().equals("Nov"));
 	}
 
 }
