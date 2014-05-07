@@ -5,11 +5,15 @@ Consider Share prices for a N number of companies given for each mon
 
 
 THIS CODE GENERATES OUTPUT
-
+-----------------------------------------------------------------------------------------------------
 List of companies
+
 Name: CompanyA
+
 Name: CompanyB
+
 Name: CompanyC
+
 -----------------------------------------------------------------------------------------------------
 Max share price company per year
 
